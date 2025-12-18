@@ -1,0 +1,19 @@
+fastapi==0.104.1
+uvicorn==0.24.0
+pydantic>=2.9.0
+pydantic-settings>=2.4.0
+langchain==0.1.0
+langchain-core>=0.1.7        # Fixed: Updated to match langchain's requirement
+neo4j>=5.24.0                # Updated: For Python 3.13 support
+redis==5.0.1
+httpx==0.25.2
+requests==2.31.0
+tenacity==8.2.3
+python-pptx>=1.0.0           # Updated: For Python 3.13 support
+structlog==24.1.0
+python-dateutil==2.8.2
+aiofiles==23.2.1
+aiohttp>=3.10.0              # Updated: For Python 3.13 support
+beautifulsoup4==4.12.2
+lxml>=5.3.0                  # Updated: Critical for Python 3.13 support
+reportlab

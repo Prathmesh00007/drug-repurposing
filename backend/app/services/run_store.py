@@ -14,7 +14,7 @@ class RunStore:
     
     def __init__(self):
         self.settings = get_settings()
-        self.data_dir = Path(self.settings.data_dir)
+        self.data_dir = Path("/tmp/runs/.data")
         self.data_dir.mkdir(parents=True, exist_ok=True)
     
     def _get_run_dir(self, run_id: str) -> Path:

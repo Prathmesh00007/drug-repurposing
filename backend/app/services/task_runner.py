@@ -48,6 +48,14 @@ async def run_route_a_workflow(
         # Run the graph workflow
         output_state = await graph.ainvoke(state.dict())
         
+        # Persist report bytes (if generated) to disk so it can be served to frontend
+        report_bytes = output_state.pop("report_bytes", None)
+        if report_bytes:
+            # The orchestrator generates a PDF report
+            run_store.save_report(run_id, report_bytes, filename="report.pdf")
+            # Keep a report_path in state for completeness (served via metadata)
+            output_state["report_path"] = str(run_store.get_metadata(run_id).get("report_path"))
+        
         # Convert back to state object
         state = RouteAState(**output_state)
         state.completed_at = datetime.utcnow()

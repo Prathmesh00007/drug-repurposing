@@ -17,7 +17,7 @@ import cerebras_llm as llm
 logger = logging.getLogger(__name__)
 
 # Configuration
-SEARXNG_URL = os.getenv("SEARXNG_URL", "http://localhost:8080/search")
+SEARXNG_URL = os.getenv("SEARXNG_URL", "https://searx.sev.monster/search")
 GEMINI_API_KEY = ""
 
 # Try to import PDF parsing

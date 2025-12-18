@@ -1,0 +1,30 @@
+name: Keep Render Alive
+
+on:
+  # Run every 10 minutes (Render sleeps after 15 minutes of inactivity)
+  schedule:
+    - cron: '*/10 * * * *'
+  # Allows you to run this manually from the Actions tab for testing
+  workflow_dispatch:
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Needed for the keepalive-workflow to commit validation
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Ping Render Service
+        # Replace the URL with your specific Render service URL
+        # -I sends a HEAD request (faster/lighter), -s silent mode, -f fails on HTTP errors
+        run: curl -s -f -I https://your-app-name.onrender.com
+
+      - name: Prevent GitHub from suspending cron
+        uses: gautamkrishnar/keepalive-workflow@v2
+        with:
+          # Only commits if no activity for 50 days (avoids spamming git history)
+          time_elapsed: 50
+          

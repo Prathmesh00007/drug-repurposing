@@ -14,8 +14,9 @@ class CacheManager:
     
     def __init__(self):
         self.settings = get_settings()
-        self.cache_dir = Path(self.settings.data_dir) / ".cache"
+        self.cache_dir = Path("/tmp/runs/.cache")
         self.cache_dir.mkdir(parents=True, exist_ok=True)
+
     
     def _hash_key(self, endpoint: str, params: Dict[str, Any]) -> str:
         """Create a hash key for cache lookup."""

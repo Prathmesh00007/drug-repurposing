@@ -20,7 +20,7 @@ jobs:
       - name: Ping Render Service
         # Replace the URL with your specific Render service URL
         # -I sends a HEAD request (faster/lighter), -s silent mode, -f fails on HTTP errors
-        run: curl -s -f -I https://your-app-name.onrender.com
+        run: curl -s -f -I https://drug-repurposing-ktj9.onrender.com
 
       - name: Prevent GitHub from suspending cron
         uses: gautamkrishnar/keepalive-workflow@v2

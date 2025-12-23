@@ -1,4 +1,4 @@
-Name: Keep Render Alive
+name: Keep Render Alive
 
 on:
   schedule:

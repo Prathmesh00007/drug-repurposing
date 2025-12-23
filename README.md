@@ -2,7 +2,7 @@
 
 A hybrid route-based drug repurposing platform that converts structured user intent into ranked shortlists and decision-ready reports using multi-agent reasoning pipelines.
 
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.1044j](https://img.shields.io/badge/Neo4j-5.0+-008hon](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python 📋 Table of Contents
+📋 Table of Contents
 
 - [Overview](#overview)
 - [Key Features](#key-features)
@@ -479,10 +479,6 @@ Visit http://localhost:8000/docs for Swagger UI with live testing.
 
 ***
 
-## 🤝 Contributing
-
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
 ### Development Workflow
 
 1. Fork the repository
@@ -522,7 +518,7 @@ We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guid
 
 ## 📄 License
 
-This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
 ***
 
@@ -531,15 +527,6 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file for
 - **Data Sources**: NCBI, EBI, Broad Institute, FDA, EMA, and 90+ public databases
 - **LLM Providers**: Cerebras, OpenAI, Anthropic, Google
 - **Open Source**: LangGraph, FastAPI, React, Neo4j community
-
-***
-
-## 📞 Contact & Support
-
-- **Issues**: [GitHub Issues](https://github.com/your-org/drug-repurposing-platform/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/your-org/drug-repurposing-platform/discussions)
-- **Email**: support@your-domain.com
-- **Documentation**: [Full Docs](https://docs.your-domain.com)
 
 ***
 

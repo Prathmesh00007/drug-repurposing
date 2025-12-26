@@ -19,7 +19,7 @@ jobs:
 
       - name: Ping Render Service
         # -I (Head request), -s (silent), -f (fail on error), -m 10 (10 sec timeout)
-        run: curl -s -f -I -m 10 https://drug-repurposing-ktj9.onrender.com
+        run: curl -s -f -I -m 10 https://drug-repurposing-ktj9.onrender.com/docs
 
       - name: Prevent GitHub from suspending cron
         # Replacement for the blocked action
